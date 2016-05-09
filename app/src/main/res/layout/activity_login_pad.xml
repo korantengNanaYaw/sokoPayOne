@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.worldsoko.sokopay.Activities.LoginPad">
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/pinLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/logoHolder"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+
+                android:background="@color/white">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image2"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/sokologo"
+                    app:civ_border_width="0dp"
+                    app:civ_border_color="@android:color/white"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yaw Boafo"
+                    android:id="@+id/txtAgentName"
+                    android:layout_below="@+id/profile_image2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:textColor="#eeffffff" />
+            </RelativeLayout>
+
+            <EditText
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:inputType="numberPassword"
+                android:textColor="#194E9A"
+                android:ems="10"
+                android:editable="false"
+                android:cursorVisible="false"
+                android:maxLength="4"
+                android:id="@+id/edtPin"
+                android:hint="Please enter your password"
+                android:layout_below="@+id/logoHolder"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/pinHolder"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:layout_below="@+id/logoHolder"
+                android:layout_toRightOf="@+id/edtPin"
+                android:layout_toEndOf="@+id/edtPin"
+                android:layout_margin="3dp">
+
+                <Button
+                    android:background="@drawable/roundwhite"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/pos1"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="8dp" />
+
+                <Button
+                    android:background="@drawable/roundwhite"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/pos2"
+                    android:layout_alignBottom="@+id/pos1"
+                    android:layout_toRightOf="@+id/pos1"
+                    android:layout_toEndOf="@+id/pos1"
+                    android:layout_marginLeft="8dp" />
+
+                <Button
+                    android:background="@drawable/roundwhite"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/pos3"
+                    android:layout_alignTop="@+id/pos2"
+                    android:layout_toRightOf="@+id/pos2"
+                    android:layout_toEndOf="@+id/pos2"
+                    android:layout_marginLeft="8dp" />
+
+                <Button
+                    android:background="@drawable/roundwhite"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/pos4"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/pos3"
+                    android:layout_toEndOf="@+id/pos3"
+                    android:layout_marginLeft="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/pinHolder">
+                <include layout="@layout/calculatorlayout"
+                    android:id="@+id/keypadHolder"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
