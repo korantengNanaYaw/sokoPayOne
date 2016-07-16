@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.worldsoko.sokopay">
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
         android:name=".Application.SokoApp"
@@ -20,14 +21,18 @@
 
         <activity android:name=".Activities.FirstActivity" />
         <activity android:name=".Activities.Register">
+
+        </activity>
+        <activity android:name=".Activities.LoginPad" />
+        <activity android:name=".Activities.Launcher">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.LoginPad" />
-        <activity android:name=".Activities.Launcher"></activity>
     </application>
 
 </manifest>

@@ -1,12 +1,16 @@
 package com.worldsoko.sokopay.Activities;
 
 import android.content.Intent;
+import android.hardware.fingerprint.FingerprintManager;
+import android.support.v4.hardware.fingerprint.FingerprintManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.worldsoko.sokopay.Application.SokoApp;
 import com.worldsoko.sokopay.R;
 import com.worldsoko.sokopay.Utility.Typefacer;
 
@@ -24,10 +28,25 @@ public class Register extends AppCompatActivity {
 
         typefacer=new Typefacer();
         SetLabels();
+        fingerPrint();
     }
 
 
+private void  fingerPrint(){
 
+    FingerprintManager fingerprintManager = (FingerprintManager) SokoApp.getAppContext().getSystemService( SokoApp.getAppContext().FINGERPRINT_SERVICE);
+    if(fingerprintManager.isHardwareDetected()){
+
+
+
+        Log.d("sokopay","yes finger detected");
+
+    }else{
+        Log.d("sokopay","No finger detected");
+
+    }
+
+}
     private void SetLabels(){
 
 

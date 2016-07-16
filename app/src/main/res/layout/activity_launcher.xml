@@ -3,10 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.worldsoko.sokopay.Activities.Launcher">
 
+    tools:context="com.worldsoko.sokopay.Activities.Launcher">
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:id="@+id/kenBurn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/baa" />
+
+    <Button
+        style="@style/continueButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/buttonRegister"
+        android:layout_marginBottom="27dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginStart="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="@style/continueButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/buttonLogin"
+        android:layout_alignTop="@+id/buttonRegister"
+        android:layout_toRightOf="@+id/buttonRegister"
+        android:layout_toEndOf="@+id/buttonRegister"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp" />
 </RelativeLayout>
